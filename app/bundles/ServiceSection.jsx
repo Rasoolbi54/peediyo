@@ -9,8 +9,8 @@ const ServicesSection = () => {
   const websitePackages = [
     {
       name: "Starter Website",
-      price: "₹5,999",
-      originalPrice: "₹10,000",
+      // price: "₹5,999",
+      // originalPrice: "₹10,000",
       popular: false,
       features: [
         {
@@ -32,8 +32,8 @@ const ServicesSection = () => {
     },
     {
       name: "Essential Website",
-      price: "₹11,999",
-      originalPrice: "₹25,000",
+      // price: "₹11,999",
+      // originalPrice: "₹25,000",
       popular: true,
       features: [
         { name: "6-8 Pages (Home, About, Contact, Blog)", included: true },
@@ -56,29 +56,29 @@ const ServicesSection = () => {
     {
       name: "Email Copy Pack",
       description: "5 professional emails",
-      price: "₹4,000 - ₹6,000",
+      // price: "₹4,000 - ₹6,000",
     },
     {
       name: "Landing Page Copy",
       description: "Conversion-focused landing page",
-      price: "₹5,000 - ₹7,000",
+      // price: "₹5,000 - ₹7,000",
     },
     {
       name: "Social Media Script Pack",
       description: "10 reels/ad scripts",
-      price: "₹3,500 - ₹5,000",
+      // price: "₹3,500 - ₹5,000",
     },
     {
       name: "Full Brand Voice + Website Content",
       description: "Home, About, Services pages",
-      price: "₹6,000 - ₹8,000",
+      // price: "₹6,000 - ₹8,000",
     },
   ];
 
   const bundlePackage = {
     name: "Brand Launch Pack",
     description: "Portfolio Website + Landing Page Copy + 5 Emails",
-    price: "₹18,000 - ₹22,000",
+    // price: "₹18,000 - ₹22,000",
     badge: "Best Value",
   };
 

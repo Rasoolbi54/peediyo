@@ -95,14 +95,14 @@ export function Navbar() {
               >
                 Services
               </Link>
-              <Link
+              {/* <Link
                 href="/portfolio"
                 scroll={false}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 onClick={toggleMobileMenu}
               >
                 Our Work
-              </Link>
+              </Link> */}
               <Link
                 href="/about"
                 scroll={false}
@@ -111,14 +111,14 @@ export function Navbar() {
               >
                 About
               </Link>
-              <Link
+              {/* <Link
                 href="/blog"
                 scroll={false}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 onClick={toggleMobileMenu}
               >
                 Blog
-              </Link>
+              </Link> */}
               <Link
                 href="/pricing"
                 scroll={false}

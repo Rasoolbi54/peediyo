@@ -1,6 +1,7 @@
 "use client";
 
 import ServicesSection from "./bundles/ServiceSection";
+import Fammsection from './bundles/Fammsection'
 import { useState } from "react";
 
 import {
@@ -84,17 +85,18 @@ export default function Home() {
             </span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Transform Your Business Into a
+            Because your brand deserves
             <span className="text-primary block mt-2">
-              Revenue-Generating Machine
+              more than a template.
             </span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-            Strategic marketing solutions backed by data and proven
-            methodologies. We help businesses scale through targeted campaigns
-            that deliver measurable ROI and sustainable growth.
+          <p className="md:text-xl text-md text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            We craft conversion-led copy that speaks your brand’s truth —
+            quietly persuasive, emotionally true, and enduring. No noise. No
+            gimmicks. Just a timeless digital presence made to elevate trust and
+            sell with a story.
           </p>
-         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://calendly.com/teampeediyo/30min"
               target="_blank"
@@ -108,124 +110,87 @@ export default function Home() {
         </div>
       </section>
 
+      <Fammsection />
+
       {/* Services Preview */}
       <section id="services" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Our Services
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Comprehensive marketing solutions designed to drive growth and
-              maximize your return on investment
-            </p>
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-foreground mb-4">
+        Our Services
+      </h2>
+      <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        Copywriting crafted to spark emotion, build trust, and drive action —
+        because great writing doesn't just talk, it converts.
+      </p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          title: "Email Copywriting",
+          description:
+            "Not just emails. I create campaigns that nurture, seduce, and sell — making your audience look forward to every send.",
+          icon: <Mail className="w-6 h-6" />,
+          color:
+            "bg-cyan-50 text-cyan-600 dark:bg-cyan-950/50 dark:text-cyan-400",
+        },
+        {
+          title: "Landing Page Copy",
+          description:
+            "Your offer deserves more than a template. I build persuasive journeys that guide readers straight to “yes” — with trust and clarity.",
+          icon: <Globe className="w-6 h-6" />,
+          color:
+            "bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400",
+        },
+        {
+          title: "Script Pack / Ad Scripts",
+          description:
+            "From 15-second scroll-stoppers to long-form launches — I write for the screen like a director, not a salesperson.",
+          icon: <Video className="w-6 h-6" />,
+          color:
+            "bg-red-50 text-red-600 dark:bg-red-950/50 dark:text-red-400",
+        },
+        {
+          title: "Brand Voice Development",
+          description:
+            "Every brand has a soul. I help you find it, speak it, and scale it — so your content never sounds like anyone else.",
+          icon: <Palette className="w-6 h-6" />,
+          color:
+            "bg-yellow-50 text-yellow-400 dark:bg-yellow-950/50 dark:text-yellow-400",
+        },
+        {
+          title: "Website Copy",
+          description:
+            "The words on your site decide if they stay, scroll, or buy. I make sure they do all three — with elegance, power, and precision.",
+          icon: <PenTool className="w-6 h-6" />,
+          color:
+            "bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400",
+        },
+      ].map((service, index) => (
+        <div
+          key={index}
+          className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg transition-all duration-300"
+        >
+          <div
+            className={`inline-flex p-3 rounded-lg ${service.color} mb-6`}
+          >
+            {service.icon}
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Copywriting & Content Creation",
-                description:
-                  "Web copy, ad copy, blogs, captions, email, scripts—words that convert, crafted to tell your story, build trust, and drive action across every channel.",
-                icon: <PenTool className="w-6 h-6" />,
-                color:
-                  "bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400",
-              },
-              {
-                title: "Branding & Identity Design",
-                description:
-                  "Logos, brand kits, packaging, story visuals—craft a memorable and cohesive brand identity that leaves a lasting impression.",
-                icon: <Palette className="w-6 h-6" />,
-                color:
-                  "bg-yellow-50 text-yellow-400 dark:bg-yellow-950/50 dark:text-yellow-400",
-              },
-              {
-                title: "Website Design & Development",
-                description:
-                  "Shopify, WordPress, Webflow, HTML/CSS, speed + UI—design fast, responsive, and visually stunning websites built to perform.",
-                icon: <Globe className="w-6 h-6" />,
-                color:
-                  "bg-purple-50 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400",
-              },
-              {
-                title: "Social Media Marketing (Organic)",
-                description:
-                  "Posts, Reels, captions, scheduling, engagement growth—build engaged communities and drive conversions across all major social platforms.",
-                icon: <MessageSquare className="w-6 h-6" />,
-                color:
-                  "bg-green-50 text-green-600 dark:bg-green-950/50 dark:text-green-400",
-              },
-              {
-                title: "Performance Marketing (Ads)",
-                description:
-                  "Meta, Google, LinkedIn Ads, funnels, testing, retargeting—targeted paid ad strategies to generate leads and scale your business profitably.",
-                icon: <Target className="w-6 h-6" />,
-                color:
-                  "bg-amber-50 text-amber-400 dark:bg-amber-950/50 dark:text-amber-400",
-              },
-              {
-                title: "SEO & Organic Marketing",
-                description:
-                  "On-page, blogs, keyword strategy, GMB, backlinks—boost search visibility and traffic through proven SEO techniques.",
-                icon: <Search className="w-6 h-6" />,
-                color:
-                  "bg-indigo-50 text-indigo-600 dark:bg-indigo-950/50 dark:text-indigo-400",
-              },
-              {
-                title: "Video & Motion Graphics",
-                description:
-                  "Reels, explainer videos, YouTube edits, logo animation—dynamic video content to engage, explain, and convert.",
-                icon: <Video className="w-6 h-6" />,
-                color:
-                  "bg-red-50 text-red-600 dark:bg-red-950/50 dark:text-red-400",
-              },
-              {
-                title: "E-commerce & D2C Services",
-                description:
-                  "Product listings, upsell apps, store design, CRO—end-to-end support for scaling your D2C or eCommerce business.",
-                icon: <ShoppingCart className="w-6 h-6" />,
-                color:
-                  "bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400",
-              },
-              {
-                title: "Email & WhatsApp Marketing",
-                description:
-                  "Sequences, campaigns, newsletters, automation—reach your audience directly with personalized, automated campaigns.",
-                icon: <Mail className="w-6 h-6" />,
-                color:
-                  "bg-cyan-50 text-cyan-600 dark:bg-cyan-950/50 dark:text-cyan-400",
-              },
-              {
-                title: "Business Automation & Tech Stack",
-                description:
-                  "CRM, Zapier, project tools, Notion dashboards—automate workflows and optimize operations with modern tech tools.",
-                icon: <Cog className="w-6 h-6" />,
-                color:
-                  "bg-amber-50 text-amber-400 dark:bg-amber-950/50 dark:text-amber-400",
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="group bg-card border border-border rounded-xl p-8 hover:shadow-lg transition-all duration-300"
-              >
-                <div
-                  className={`inline-flex p-3 rounded-lg ${service.color} mb-6`}
-                >
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                {/* <button className="text-primary hover:text-primary/90 font-medium flex items-center">
-                  Learn More <ArrowRight className="w-4 h-6 ml-2" />
-                </button> */}
-              </div>
-            ))}
-          </div>
+          <h3 className="text-xl font-semibold text-foreground mb-4">
+            {service.title}
+          </h3>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            {service.description}
+          </p>
+          {/* <button className="text-primary hover:text-primary/90 font-medium flex items-center">
+            Learn More <ArrowRight className="w-4 h-6 ml-2" />
+          </button> */}
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Why Choose Us */}
       <section id="why-us" className="py-24 px-6 bg-secondary/10">
@@ -290,11 +255,11 @@ export default function Home() {
       <ServicesSection />
 
       {/* FAQ Section */}
-      <section className=" py-16 text-foreground bg-background mb-20">
+      {/* <section className=" py-16 text-foreground bg-background mb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-10 text-center">FAQs</h2>
 
-          {/* Use flex instead of grid */}
+          
           <div className="flex flex-col md:flex-row md:gap-6">
             <div className="flex-1 space-y-6">
               {faqData
@@ -366,7 +331,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section id="about" className="py-24 px-6 bg-background">
@@ -447,68 +412,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* contact */}
       <section className="bg-background py-20 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            We are here for you, <br />
-            contact us at <span className="text-primary">anytime</span>
+            Let’s Connect
+            <span className="text-primary">First.</span>
           </h2>
-          <p className=" max-w-xl mx-auto mb-12 text-foreground">
-            Have any questions about our services or just want to talk with us?
-            Please reach out.
+          <p className=" max-w-xl mx-auto mb-12 text-foreground  text-start md:text-center ">
+            Every brand is different. Every story deserves its own attention. We
+            don’t throw prices. We build aligned partnerships. If it’s a fit —
+            we move with intention.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* WhatsApp Chat */}
-            <div className="bg-card p-6 rounded-xl shadow-md text-left">
-              <div className="bg-indigo-100 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-                <MessageCircle className="text-indigo-600" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground">
-                Chat Now
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Right from WhatsApp
-              </p>
-              <a
-                href="https://wa.me/916200554124"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-2 px-4 rounded-lg transition"
-              >
-                Start chat →
-              </a>
-            </div>
+          <div className="flex flex-col md:flex-row justify-center items-start md:text-center gap-4">
+            {/* Book Call Button */}
+            <a
+              href="https://calendly.com/teampeediyo/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition"
+            >
+              Book Call
+            </a>
 
-            {/* Email */}
-            <div className="bg-card p-6 rounded-xl shadow-md text-left">
-              <div className="bg-purple-100 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-                <Mail className="text-purple-600" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground">
-                Email Us
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                From your email app
-              </p>
-              <p className="text-primary font-medium">
-                houseofpeediyo@gmail.com
-              </p>
-            </div>
-
-            {/* Call or Text */}
-            <div className="bg-card p-6 rounded-xl shadow-md text-left">
-              <div className="bg-red-100 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-                <Phone className="text-red-500" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground">
-                Call or text us
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                From your phone
-              </p>
-              <p className="text-primary font-medium">+91 6200 554 124</p>
-            </div>
+            {/* WhatsApp Chat Button */}
+            <a
+              href="https://wa.me/916200554124"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-white  font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition"
+            >
+              Chat On Whatsapp
+            </a>
           </div>
 
           {/* Other Links */}
